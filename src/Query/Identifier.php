@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query;
+namespace ItStably\ClickhouseBuilder\Query;
 
 /**
  * Object for element identity which should be escaped.

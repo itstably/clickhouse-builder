@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Integrations\Laravel;
+namespace ItStably\ClickhouseBuilder\Integrations\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 

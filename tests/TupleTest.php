@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder;
+namespace ItStably\ClickhouseBuilder;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\ClickhouseBuilder\Query\Tuple;
+use ItStably\ClickhouseBuilder\Query\Tuple;
 
 class TupleTest extends TestCase
 {

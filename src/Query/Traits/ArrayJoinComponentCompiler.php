@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Query\ArrayJoinClause;
-use Tinderbox\ClickhouseBuilder\Query\BaseBuilder as Builder;
+use ItStably\ClickhouseBuilder\Query\ArrayJoinClause;
+use ItStably\ClickhouseBuilder\Query\BaseBuilder as Builder;
 
 trait ArrayJoinComponentCompiler
 {

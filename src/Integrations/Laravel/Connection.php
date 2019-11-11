@@ -1,19 +1,19 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Integrations\Laravel;
+namespace ItStably\ClickhouseBuilder\Integrations\Laravel;
 
-use Tinderbox\Clickhouse\Client;
-use Tinderbox\Clickhouse\Cluster;
-use Tinderbox\Clickhouse\Common\ServerOptions;
-use Tinderbox\Clickhouse\Interfaces\TransportInterface;
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Server;
-use Tinderbox\Clickhouse\ServerProvider;
-use Tinderbox\Clickhouse\Transport\HttpTransport;
-use Tinderbox\ClickhouseBuilder\Exceptions\BuilderException;
-use Tinderbox\ClickhouseBuilder\Exceptions\NotSupportedException;
-use Tinderbox\ClickhouseBuilder\Query\Enums\Format;
-use Tinderbox\ClickhouseBuilder\Query\Expression;
+use ItStably\Clickhouse\Client;
+use ItStably\Clickhouse\Cluster;
+use ItStably\Clickhouse\Common\ServerOptions;
+use ItStably\Clickhouse\Interfaces\TransportInterface;
+use ItStably\Clickhouse\Query;
+use ItStably\Clickhouse\Server;
+use ItStably\Clickhouse\ServerProvider;
+use ItStably\Clickhouse\Transport\HttpTransport;
+use ItStably\ClickhouseBuilder\Exceptions\BuilderException;
+use ItStably\ClickhouseBuilder\Exceptions\NotSupportedException;
+use ItStably\ClickhouseBuilder\Query\Enums\Format;
+use ItStably\ClickhouseBuilder\Query\Expression;
 
 class Connection extends \Illuminate\Database\Connection
 {
@@ -62,7 +62,7 @@ class Connection extends \Illuminate\Database\Connection
     /**
      * Last executed query statistic
      *
-     * @var \Tinderbox\Clickhouse\Query\QueryStatistic
+     * @var \ItStably\Clickhouse\Query\QueryStatistic
      */
     protected $lastQueryStatistic;
     
@@ -102,8 +102,8 @@ class Connection extends \Illuminate\Database\Connection
     /**
      * Returns statistic for last query
      *
-     * @return array|\Tinderbox\Clickhouse\Query\QueryStatistic
-     * @throws \Tinderbox\ClickhouseBuilder\Exceptions\BuilderException
+     * @return array|\ItStably\Clickhouse\Query\QueryStatistic
+     * @throws \ItStably\ClickhouseBuilder\Exceptions\BuilderException
      */
     public function getLastQueryStatistic()
     {
@@ -117,7 +117,7 @@ class Connection extends \Illuminate\Database\Connection
     /**
      * Sets last query statistic
      *
-     * @param array|\Tinderbox\Clickhouse\Query\QueryStatistic $queryStatistic
+     * @param array|\ItStably\Clickhouse\Query\QueryStatistic $queryStatistic
      */
     protected function setLastQueryStatistic($queryStatistic)
     {
@@ -142,7 +142,7 @@ class Connection extends \Illuminate\Database\Connection
      *
      * @param array  $options
      *
-     * @return \Tinderbox\Clickhouse\Interfaces\TransportInterface
+     * @return \ItStably\Clickhouse\Interfaces\TransportInterface
      */
     protected function createTransport(array $options) : TransportInterface
     {
@@ -230,7 +230,7 @@ class Connection extends \Illuminate\Database\Connection
     /**
      * Get a new query builder instance.
      *
-     * @return \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Builder
+     * @return \ItStably\ClickhouseBuilder\Integrations\Laravel\Builder
      */
     public function query()
     {
@@ -242,7 +242,7 @@ class Connection extends \Illuminate\Database\Connection
      *
      * @param string $table
      *
-     * @return \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Builder
+     * @return \ItStably\ClickhouseBuilder\Integrations\Laravel\Builder
      */
     public function table($table)
     {
@@ -322,7 +322,7 @@ class Connection extends \Illuminate\Database\Connection
         $statistic = [];
         
         foreach ($results as $i => $result) {
-            /* @var \Tinderbox\Clickhouse\Query\Result $result */
+            /* @var \ItStably\Clickhouse\Query\Result $result */
             /* @var Query $query */
             $query = $result->getQuery();
             
@@ -516,7 +516,7 @@ class Connection extends \Illuminate\Database\Connection
      *
      * @param string $hostname
      *
-     * @return \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Connection
+     * @return \ItStably\ClickhouseBuilder\Integrations\Laravel\Connection
      */
     public function using(string $hostname): self
     {

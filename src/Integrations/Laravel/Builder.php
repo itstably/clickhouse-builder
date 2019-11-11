@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Integrations\Laravel;
+namespace ItStably\ClickhouseBuilder\Integrations\Laravel;
 
 use Illuminate\Support\Traits\Macroable;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Query\QueryStatistic;
-use Tinderbox\ClickhouseBuilder\Query\BaseBuilder;
-use Tinderbox\ClickhouseBuilder\Query\Grammar;
+use ItStably\Clickhouse\Common\Format;
+use ItStably\Clickhouse\Query;
+use ItStably\Clickhouse\Query\QueryStatistic;
+use ItStably\ClickhouseBuilder\Query\BaseBuilder;
+use ItStably\ClickhouseBuilder\Query\Grammar;
 
 class Builder extends BaseBuilder
 {
@@ -18,14 +18,14 @@ class Builder extends BaseBuilder
     /**
      * Connection which is used to perform queries.
      *
-     * @var \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Connection
+     * @var \ItStably\ClickhouseBuilder\Integrations\Laravel\Connection
      */
     protected $connection;
 
     /**
      * Builder constructor.
      *
-     * @param \Tinderbox\ClickhouseBuilder\Integrations\Laravel\Connection $connection
+     * @param \ItStably\ClickhouseBuilder\Integrations\Laravel\Connection $connection
      */
     public function __construct(Connection $connection)
     {
@@ -36,9 +36,9 @@ class Builder extends BaseBuilder
     /**
      * Perform compiled from builder sql query and getting result.
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\ClientException
+     * @throws \ItStably\Clickhouse\Exceptions\ClientException
      *
-     * @return \Tinderbox\Clickhouse\Query\Result|\Tinderbox\Clickhouse\Query\Result[]
+     * @return \ItStably\Clickhouse\Query\Result|\ItStably\Clickhouse\Query\Result[]
      */
     public function get()
     {
@@ -84,7 +84,7 @@ class Builder extends BaseBuilder
     /**
      * Perform query and get first row
      *
-     * @return mixed|null|\Tinderbox\Clickhouse\Query\Result
+     * @return mixed|null|\ItStably\Clickhouse\Query\Result
      */
     public function first()
     {
@@ -122,7 +122,7 @@ class Builder extends BaseBuilder
      * Insert in table data from files.
      *
      * @param array                                                 $columns
-     * @param string|\Tinderbox\Clickhouse\Interfaces\FileInterface $file
+     * @param string|\ItStably\Clickhouse\Interfaces\FileInterface $file
      * @param string                                                $format
      *
      * @return bool
@@ -182,7 +182,7 @@ class Builder extends BaseBuilder
     /**
      * Get last query statistics from the connection.
      *
-     * @throws \Tinderbox\ClickhouseBuilder\Exceptions\BuilderException
+     * @throws \ItStably\ClickhouseBuilder\Exceptions\BuilderException
      *
      * @return QueryStatistic
      */

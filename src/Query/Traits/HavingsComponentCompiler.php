@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Query\BaseBuilder as Builder;
-use Tinderbox\ClickhouseBuilder\Query\TwoElementsLogicExpression;
+use ItStably\ClickhouseBuilder\Query\BaseBuilder as Builder;
+use ItStably\ClickhouseBuilder\Query\TwoElementsLogicExpression;
 
 trait HavingsComponentCompiler
 {

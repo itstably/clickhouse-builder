@@ -1,17 +1,17 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query;
+namespace ItStably\ClickhouseBuilder\Query;
 
-use Tinderbox\Clickhouse\Client;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Query;
+use ItStably\Clickhouse\Client;
+use ItStably\Clickhouse\Common\Format;
+use ItStably\Clickhouse\Query;
 
 class Builder extends BaseBuilder
 {
     /**
      * Client which is used to perform queries.
      *
-     * @var \Tinderbox\Clickhouse\Client
+     * @var \ItStably\Clickhouse\Client
      */
     protected $client;
     
@@ -31,7 +31,7 @@ class Builder extends BaseBuilder
      *
      * @param array $settings
      *
-     * @return \Tinderbox\Clickhouse\Query\Result|\Tinderbox\Clickhouse\Query\Result[]
+     * @return \ItStably\Clickhouse\Query\Result|\ItStably\Clickhouse\Query\Result[]
      */
     public function get(array $settings = [])
     {
@@ -107,7 +107,7 @@ class Builder extends BaseBuilder
      * Insert in table data from files.
      *
      * @param array $columns
-     * @param string|\Tinderbox\Clickhouse\Interfaces\FileInterface $file
+     * @param string|\ItStably\Clickhouse\Interfaces\FileInterface $file
      * @param string $format
      *
      * @param array $settings
@@ -128,7 +128,7 @@ class Builder extends BaseBuilder
      *
      * @param array $values
      *
-     * @throws \Tinderbox\ClickhouseBuilder\Exceptions\GrammarException
+     * @throws \ItStably\ClickhouseBuilder\Exceptions\GrammarException
      *
      * @return bool
      */

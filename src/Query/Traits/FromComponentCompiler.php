@@ -1,10 +1,10 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Exceptions\GrammarException;
-use Tinderbox\ClickhouseBuilder\Query\BaseBuilder;
-use Tinderbox\ClickhouseBuilder\Query\From;
+use ItStably\ClickhouseBuilder\Exceptions\GrammarException;
+use ItStably\ClickhouseBuilder\Query\BaseBuilder;
+use ItStably\ClickhouseBuilder\Query\From;
 
 trait FromComponentCompiler
 {

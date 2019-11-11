@@ -1,17 +1,17 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder;
+namespace ItStably\ClickhouseBuilder;
 
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Client;
-use Tinderbox\ClickhouseBuilder\Exceptions\BuilderException;
-use Tinderbox\ClickhouseBuilder\Exceptions\GrammarException;
-use Tinderbox\ClickhouseBuilder\Exceptions\NotSupportedException;
-use Tinderbox\ClickhouseBuilder\Query\Builder;
-use Tinderbox\ClickhouseBuilder\Query\From;
-use Tinderbox\ClickhouseBuilder\Query\JoinClause;
+use ItStably\Clickhouse\Client;
+use ItStably\ClickhouseBuilder\Exceptions\BuilderException;
+use ItStably\ClickhouseBuilder\Exceptions\GrammarException;
+use ItStably\ClickhouseBuilder\Exceptions\NotSupportedException;
+use ItStably\ClickhouseBuilder\Query\Builder;
+use ItStably\ClickhouseBuilder\Query\From;
+use ItStably\ClickhouseBuilder\Query\JoinClause;
 
 class ExceptionsTest extends TestCase
 {

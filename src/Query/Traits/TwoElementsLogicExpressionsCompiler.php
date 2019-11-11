@@ -1,11 +1,11 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Query\Column;
-use Tinderbox\ClickhouseBuilder\Query\Enums\Operator;
-use Tinderbox\ClickhouseBuilder\Query\Tuple;
-use Tinderbox\ClickhouseBuilder\Query\TwoElementsLogicExpression;
+use ItStably\ClickhouseBuilder\Query\Column;
+use ItStably\ClickhouseBuilder\Query\Enums\Operator;
+use ItStably\ClickhouseBuilder\Query\Tuple;
+use ItStably\ClickhouseBuilder\Query\TwoElementsLogicExpression;
 
 trait TwoElementsLogicExpressionsCompiler
 {

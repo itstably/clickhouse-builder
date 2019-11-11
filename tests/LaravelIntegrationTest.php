@@ -1,20 +1,20 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder;
+namespace ItStably\ClickhouseBuilder;
 
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Database\DatabaseServiceProvider;
 use Illuminate\Events\EventServiceProvider;
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\FileFromString;
-use Tinderbox\ClickhouseBuilder\Exceptions\BuilderException;
-use Tinderbox\ClickhouseBuilder\Exceptions\NotSupportedException;
-use Tinderbox\ClickhouseBuilder\Integrations\Laravel\Builder;
-use Tinderbox\ClickhouseBuilder\Integrations\Laravel\ClickhouseServiceProvider;
-use Tinderbox\ClickhouseBuilder\Integrations\Laravel\Connection;
-use Tinderbox\ClickhouseBuilder\Query\Enums\Format;
-use Tinderbox\ClickhouseBuilder\Query\Expression;
+use ItStably\Clickhouse\Common\FileFromString;
+use ItStably\ClickhouseBuilder\Exceptions\BuilderException;
+use ItStably\ClickhouseBuilder\Exceptions\NotSupportedException;
+use ItStably\ClickhouseBuilder\Integrations\Laravel\Builder;
+use ItStably\ClickhouseBuilder\Integrations\Laravel\ClickhouseServiceProvider;
+use ItStably\ClickhouseBuilder\Integrations\Laravel\Connection;
+use ItStably\ClickhouseBuilder\Query\Enums\Format;
+use ItStably\ClickhouseBuilder\Query\Expression;
 
 class LaravelIntegrationTest extends TestCase
 {

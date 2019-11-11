@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Enums;
+namespace ItStably\ClickhouseBuilder\Query\Enums;
 
 use MyCLabs\Enum\Enum;
 

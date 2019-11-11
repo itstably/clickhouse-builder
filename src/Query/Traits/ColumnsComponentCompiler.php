@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Query\BaseBuilder;
-use Tinderbox\ClickhouseBuilder\Query\Column;
+use ItStably\ClickhouseBuilder\Query\BaseBuilder;
+use ItStably\ClickhouseBuilder\Query\Column;
 
 trait ColumnsComponentCompiler
 {

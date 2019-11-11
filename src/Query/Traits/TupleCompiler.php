@@ -1,8 +1,8 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Query\Traits;
+namespace ItStably\ClickhouseBuilder\Query\Traits;
 
-use Tinderbox\ClickhouseBuilder\Query\Tuple;
+use ItStably\ClickhouseBuilder\Query\Tuple;
 
 trait TupleCompiler
 {

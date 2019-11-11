@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\ClickhouseBuilder\Exceptions;
+namespace ItStably\ClickhouseBuilder\Exceptions;
 
 class BuilderException extends Exception
 {

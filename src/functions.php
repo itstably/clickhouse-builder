@@ -50,11 +50,11 @@ if (! function_exists('raw')) {
      *
      * @param string $expr
      *
-     * @return \Tinderbox\ClickhouseBuilder\Query\Expression
+     * @return \ItStably\ClickhouseBuilder\Query\Expression
      */
-    function raw(string $expr): \Tinderbox\ClickhouseBuilder\Query\Expression
+    function raw(string $expr): \ItStably\ClickhouseBuilder\Query\Expression
     {
-        return new \Tinderbox\ClickhouseBuilder\Query\Expression($expr);
+        return new \ItStably\ClickhouseBuilder\Query\Expression($expr);
     }
 }
 
@@ -62,11 +62,11 @@ if (! function_exists('into_memory_table')) {
     /**
      * Creates temporary table if table does not exists and inserts provided data into query
      *
-     * @param \Tinderbox\ClickhouseBuilder\Query\Builder|\Tinderbox\ClickhouseBuilder\Integrations\Laravel\Builder $builder
+     * @param \ItStably\ClickhouseBuilder\Query\Builder|\ItStably\ClickhouseBuilder\Integrations\Laravel\Builder $builder
      * @param array|null                                                                                           $structure
      *
      * @return bool
-     * @throws \Tinderbox\ClickhouseBuilder\Exceptions\BuilderException
+     * @throws \ItStably\ClickhouseBuilder\Exceptions\BuilderException
      */
     function into_memory_table($builder, $structure = null): bool
     {
@@ -80,20 +80,20 @@ if (! function_exists('into_memory_table')) {
         $file = $builder->getValues();
         $format = $builder->getFormat();
 
-        if (is_null($tableName) && $file instanceof \Tinderbox\Clickhouse\Common\TempTable) {
+        if (is_null($tableName) && $file instanceof \ItStably\Clickhouse\Common\TempTable) {
             $tableName = $file->getName();
         }
 
-        if (is_null($structure) && $file instanceof \Tinderbox\Clickhouse\Common\TempTable) {
+        if (is_null($structure) && $file instanceof \ItStably\Clickhouse\Common\TempTable) {
             $structure = $file->getStructure();
         }
 
-        if (is_null($format) && $file instanceof \Tinderbox\Clickhouse\Common\TempTable) {
+        if (is_null($format) && $file instanceof \ItStably\Clickhouse\Common\TempTable) {
             $format = $file->getFormat();
         }
 
         if (is_null($structure)) {
-            throw \Tinderbox\ClickhouseBuilder\Exceptions\BuilderException::noTableStructureProvided();
+            throw \ItStably\ClickhouseBuilder\Exceptions\BuilderException::noTableStructureProvided();
         }
     
         $builder->newQuery()->dropTableIfExists($tableName);
@@ -106,12 +106,12 @@ if (! function_exists('into_memory_table')) {
 }
 
 if (! function_exists('file_from')) {
-    function file_from($file): \Tinderbox\Clickhouse\Interfaces\FileInterface
+    function file_from($file): \ItStably\Clickhouse\Interfaces\FileInterface
     {
         if (is_string($file) && is_file($file)) {
-            $file = new \Tinderbox\Clickhouse\Common\File($file);
+            $file = new \ItStably\Clickhouse\Common\File($file);
         } elseif (is_scalar($file)) {
-            $file = new \Tinderbox\Clickhouse\Common\FileFromString($file);
+            $file = new \ItStably\Clickhouse\Common\FileFromString($file);
         }
 
         return $file;
