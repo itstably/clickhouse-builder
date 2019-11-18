@@ -80,6 +80,9 @@ class Grammar
                 $sql[$component] = $this->$compileMethod($query, $query->$component());
             }
         }
+        if($query->aggregate['function'] === 'count') {
+            $sql['getColumns'] = $query->aggregate['function'].'()';
+        }
 
         return trim('SELECT ' . trim(implode(' ', $sql)));
     }

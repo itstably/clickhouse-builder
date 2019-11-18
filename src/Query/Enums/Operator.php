@@ -17,6 +17,7 @@ final class Operator extends Enum
     public const GREATER = '>';
     public const LIKE = 'LIKE';
     public const NOT_LIKE = 'NOT LIKE';
+    public const like = 'like';
     public const BETWEEN = 'BETWEEN';
     public const NOT_BETWEEN = 'NOT BETWEEN';
     public const IN = 'IN';
