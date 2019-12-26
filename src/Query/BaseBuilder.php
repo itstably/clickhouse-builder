@@ -173,6 +173,8 @@ abstract class BaseBuilder
      * @var \Illuminate\Database\Eloquent\Model
      */
     protected $model;
+    
+    protected $perPage = 15;
 
     /**
      * Set columns for select statement.

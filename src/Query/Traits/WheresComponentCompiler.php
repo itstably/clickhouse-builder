@@ -19,6 +19,9 @@ trait WheresComponentCompiler
     {
         $result = $this->compileTwoElementLogicExpressions($wheres);
 
-        return "WHERE {$result}";
+        if($result !== '()') {
+            return "WHERE {$result}";
+        }
+        return '';
     }
 }
